@@ -49,6 +49,7 @@
 .toggle-visibility {
   position: fixed;
   top: 20px;
+  z-index: 1;
 }
 
 .tooltip {
