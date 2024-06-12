@@ -1,0 +1,6 @@
+.bar-chart {
+  display: flex;
+  height: 100px;
+  transition: height 5s 1s;
+  margin: 0 16px;
+}
