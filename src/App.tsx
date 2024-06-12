@@ -29,12 +29,17 @@ function App() {
 
   return (
     <div>
-      <button className="toggle-visibility" onClick={toggleChartStatus}>
+	{/* Box component is for showing the interactive shape */}
+	<Box />
+		{/* this div is for showing the interactive velocity chart */}
+      <div>
+	  <button className="toggle-visibility" onClick={toggleChartStatus}>
         {showChart ? "Hide the Chart" : "Show the Chart"}
       </button>
       <div className="chart-view">
         {showChart ? <InteractiveChart data={CHART_DATA} /> : null}
       </div>
+	  </div>
     </div>
   );
 }
