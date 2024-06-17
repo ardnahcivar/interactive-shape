@@ -1,0 +1,24 @@
+.circle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+  animation: circle 400ms;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+}
