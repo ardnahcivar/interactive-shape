@@ -2,9 +2,10 @@ import { useState } from "react";
 
 import "./App.css";
 import InteractiveChart from "./InteractiveChart";
-import CircleGame from './CircleGame';
 
 import Box from "./Box";
+import CircleGame from "./CircleGame";
+import AvatarPicker from "./AvatarPicker/AvatarPicker";
 
 const CHART_DATA = [
   { id: "dep-1", name: "Legal", ticketCount: 32, colour: "#3F888F" },
@@ -27,12 +28,11 @@ function App() {
   const toggleChartStatus = () => {
     setChartStatus((state) => !state);
   };
-
   return (
     <div>
-	    {/* Box component is for showing the interactive shape */}
-	    <Box />
-		  {/* this div is for showing the interactive velocity chart */}
+      {/* Box component is for showing the interactive shape */}
+      <Box />
+      {/* this div is for showing the interactive velocity chart */}
       <div>
         <button className="toggle-visibility" onClick={toggleChartStatus}>
           {showChart ? "Hide the Chart" : "Show the Chart"}
@@ -40,11 +40,14 @@ function App() {
         <div className="chart-view">
           {showChart ? <InteractiveChart data={CHART_DATA} /> : null}
         </div>
-	    </div>
-		  {/* this div is for showing the circles game */}
-
+      </div>
+      {/* this div is for showing the circles game */}
       <div>
         <CircleGame />
+      </div>
+      {/**this div is for showing avatar picker component */}
+      <div>
+        <AvatarPicker />
       </div>
     </div>
   );
